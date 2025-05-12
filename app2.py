@@ -5,13 +5,11 @@ from collections import defaultdict
 import pandas as pd
 from sentence_transformers import SentenceTransformer
 
-# ✅ Важно: должен быть ВПЕРВЫЕ вызванным Streamlit-командой
 st.set_page_config(page_title="PaperMind: NLP-based Research Explorer", layout="wide")
 
-# Теперь можно кэшировать
 @st.cache_resource
 def load_model():
-    return SentenceTransformer("all-MiniLM-L6-v2")
+    return SentenceTransformer("all-MiniLM-L12-v2")
 
 model = load_model()
 
