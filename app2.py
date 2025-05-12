@@ -3,12 +3,13 @@ import torch
 from sentence_transformers import util
 from collections import defaultdict
 import pandas as pd
-from sentence_transformers import SentenceTransformer
+#from sentence_transformers import SentenceTransformer
 
 st.set_page_config(page_title="PaperMind: NLP-based Research Explorer", layout="wide")
 
 @st.cache_resource
 def load_model():
+    from sentence_transformers import SentenceTransformer
     return SentenceTransformer("all-MiniLM-L12-v2")
 
 model = load_model()
