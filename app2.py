@@ -12,7 +12,7 @@ st.set_page_config(page_title="PaperMind: NLP-based Research Explorer", layout="
 #    return SentenceTransformer("all-MiniLM-L6-v2")
 
 #model = load_model()
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-MiniLM-12-v2")
 
 @st.cache_data
 def generate_embeddings(dataset):
