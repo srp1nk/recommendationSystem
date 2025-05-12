@@ -27,7 +27,7 @@ embeddings = generate_embeddings(nlp_dataset)
 
 available_topics = ["All topics"] + sorted(nlp_dataset['topic_label'].dropna().unique().tolist())
 
-st.title("Semantic Article Search & Author Recommendation")
+st.title("PaperMind: NLP-based Research Explorer")
 
 tab1, tab2 = st.tabs(["Search Articles", "Recommend Authors"])
 
