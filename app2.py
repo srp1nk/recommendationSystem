@@ -7,12 +7,11 @@ from sentence_transformers import SentenceTransformer
 
 st.set_page_config(page_title="PaperMind: NLP-based Research Explorer", layout="wide")
 
-#@st.cache_resource
-#def load_model():
-#    return SentenceTransformer("all-MiniLM-L6-v2")
+@st.cache_resource
+def load_model():
+    return SentenceTransformer("all-MiniLM-L6-v2")
 
-#model = load_model()
-model = SentenceTransformer("all-MiniLM-L12-v2")
+model = load_model()
 
 @st.cache_data
 def generate_embeddings(dataset):
